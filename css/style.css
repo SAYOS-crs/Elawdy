@@ -1,0 +1,1434 @@
+body{
+
+   ::selection{
+        background-color: var(--main-color);
+        color: var(--text-color);
+   }
+
+    
+}
+
+
+
+
+
+:root{
+    --main-color:#1C1C1C;
+    --text-color:#FFFFFF;
+    
+
+
+}
+
+.bg-main{
+    background-color: var(--main-color);
+}
+
+.text-color{
+    color: var(--text-color);
+    
+}
+.text-color-dark{
+    color: var(--main-color);
+}
+
+
+h1 , h2 , h3 , h4{
+    font-family: "Montserrat", sans-serif;
+}
+
+.text-up{
+    text-transform: uppercase;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+}
+.font-Montserrat{
+    font-family: "Montserrat", sans-serif;
+
+}
+
+a{
+    color: inherit;
+    padding: 0;
+}
+
+
+header.header h3{
+    
+    font-weight: 900;
+    font-size: 40px;
+    color: #343434;
+}
+
+
+.justify-align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* ^^^^^^ global style ^^^^^^^^^^ */
+/* //////////// nav ///////////////// */
+
+#navbar-Daniels{
+    background-color: #FFFFFF;
+}
+
+.navbar-brand h3{
+    
+    font-weight: 800;   
+    font-size:18px ;
+}
+
+
+.navbar-nav{
+    align-items: center;
+}
+
+
+
+.navbar-expand-lg .navbar-nav .nav-link{
+
+    color: var(--main-color);
+    font-family: "Poppins", sans-serif;
+    font-weight:400 ;
+    font-size: 14px;
+    padding: 0;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+
+    
+    position: relative;
+    
+    /* &::after{
+        content: '';
+        background-color: var(--main-color);
+        
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        animation: border-animation forwards 1s ;
+    } */
+
+}
+
+
+/* $$$$$$$$$ just did it today (5-12) $$$$$$$$$ */
+.nav-item a.nav-link{
+    position: relative;
+}
+
+.nav-item a.nav-link::after{
+        content: '';
+        background-color: var(--main-color);
+        
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: width 1s;
+        
+}
+
+
+.nav-item a.nav-link.active::after{
+        width: 100%;
+}
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+/* //////////// nav ///////////////// */
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start home section /////////////// */
+#Home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.633)) , url(../img/bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+
+
+    header{
+        h3{
+            font-weight: 800;
+            font-size: 50px;
+        }
+        h1{
+            font-weight: 200;
+            font-size: 60px;
+
+            &::after{
+                content: '';
+                font-weight: 400;
+                animation: type-animation alternate infinite 6s  ;
+                animation-delay: unset;
+                animation-timing-function: cubic-bezier(0.002, 0.012, 0.99, 1.004);
+                /* border-right: 2px white solid; */
+            }
+        }
+
+    }
+
+    .home-icons-content{
+        width: 35px;
+        height: 35px;
+        background-color: #02020276;
+        cursor: pointer;
+    }
+   
+}
+
+
+/* 
+@keyframes type-animation {
+    0% { content: 'D'; }
+    1.66% { content: 'De'; }
+    3.32% { content: 'Dev'; }
+    4.98% { content: 'Deve'; }
+    6.64% { content: 'Devel'; }
+    8.3% { content: 'Develo'; }
+    9.96% { content: 'Develop'; }
+    11.62% { content: 'Develope'; }
+    13.28% { content: 'Developer'; }
+    14.94% { content: 'Develope'; }
+    16.6% { content: 'Develop'; }
+    18.26% { content: 'Develo'; }
+    19.92% { content: 'Devel'; }
+    21.58% { content: 'Deve'; }
+    23.24% { content: 'Dev'; }
+    24.9% { content: 'De'; }
+    26.56% { content: 'D'; }
+    28.22% { content: ''; }
+  
+    29.88% { content: 'D'; }
+    31.54% { content: 'De'; }
+    33.2% { content: 'Des'; }
+    34.86% { content: 'Desi'; }
+    36.52% { content: 'Desig'; }
+    38.18% { content: 'Design'; }
+    39.84% { content: 'Designe'; }
+    41.5% { content: 'Designer'; }
+    43.16% { content: 'Designer'; }
+    44.82% { content: 'Designe'; }
+    46.48% { content: 'Design'; }
+    48.14% { content: 'Desig'; }
+    49.8% { content: 'Desi'; }
+    51.46% { content: 'Des'; }
+    53.12% { content: 'De'; }
+    54.78% { content: 'D'; }
+    56.44% { content: ''; }
+  
+    58.1% { content: 'L'; }
+    59.76% { content: 'La'; }
+    61.42% { content: 'Lar'; }
+    63.08% { content: 'Larr'; }
+    64.74% { content: 'Larry'; }
+    66.4% { content: 'Larry '; }
+    68.06% { content: 'Larry D'; }
+    69.72% { content: 'Larry Da'; }
+    71.38% { content: 'Larry Dan'; }
+    73.04% { content: 'Larry Dani'; }
+    74.7% { content: 'Larry Danie'; }
+    76.36% { content: 'Larry Daniel'; }
+    78.02% { content: 'Larry Daniels'; }
+    79.68% { content: 'Larry Daniels'; }
+    81.34% { content: 'Larry Daniel'; }
+    83% { content: 'Larry Danie'; }
+    84.66% { content: 'Larry Dani'; }
+    86.32% { content: 'Larry Dan'; }
+    87.98% { content: 'Larry Da'; }
+    89.64% { content: 'Larry D'; }
+    91.3% { content: 'Larry '; }
+    92.96% { content: 'Larry'; }
+    94.62% { content: 'Larr'; }
+    96.28% { content: 'Lar'; }
+    97.94% { content: 'La'; }
+    99.6% { content: 'L'; }
+    100% { content: ''; }
+    
+
+} */
+
+
+/* ////////// end  home section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start about section /////////////// */
+
+#About{
+    scroll-margin-top:110px ;
+}
+
+
+.about-content{
+
+    p{
+        font-weight:400 ;
+        font-size: 15px;
+        line-height: 27px;
+        color: rgb(116, 129, 130);
+    }
+
+    header{
+
+        h3{
+            font-weight: 800;
+            font-size: 30px;
+            color: rgb(52, 52, 52);
+        }
+
+        p{
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: rgb(153, 153, 153);
+        }
+    }
+
+    
+
+}
+
+.about-text{
+    padding-top: 50px;
+}
+
+
+
+
+.progress, .progress-stacked{
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.111); 
+}
+
+
+.progress-bar{
+    background-color: var(--main-color);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    span{
+        padding: 1px 10px;
+    }
+}
+
+
+.but-about{
+    border: 1px solid ;
+    border-color: var(--main-color) !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+}
+
+.but-about-2:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+
+
+#bar1{
+    width: 30%;
+    animation: progress-bar1 forwards  1s 0.3s;
+}
+
+
+#bar2{
+    width: 30%;
+    animation: progress-bar2 forwards  0.7s 0.5s;
+}
+
+
+#bar3{
+    width: 30%;
+    animation: progress-bar3 forwards  0.7s 0.6s;
+}
+
+
+@keyframes progress-bar1 {
+    from{
+        width: 30%;
+    } 
+    
+
+
+    to {
+        width: 95%;
+    }
+    
+}
+
+
+@keyframes progress-bar2 {
+    from{
+        width: 30%;
+    } 
+    
+
+
+    to {
+        width: 80%;
+    }
+}
+
+
+@keyframes progress-bar3 {
+    from{
+        width: 30%;
+    } 
+    
+
+
+    to {
+        width: 90%;
+    }
+}
+
+
+/* ////////// end about  section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start Services section /////////////// */
+
+#Services{
+    scroll-margin-top:100px ;
+
+}
+
+
+
+.services-icon{
+
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+    transition: all 0.5s;
+}
+
+.Services-content{
+
+
+    &:hover{
+        .services-icon{
+            background-color: var(--main-color);
+            color: var(--text-color);
+        }
+    }
+
+    .Services-text{
+
+
+        h3{
+            font-weight:800 ;
+            font-size: 18px;
+        }
+
+        p{
+            font-weight:400 ;
+            font-size: 14px;
+            color: rgb(116, 129, 130);
+        }
+    }
+
+}
+
+
+
+/* ////////// end  Services section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start work section /////////////// */
+
+#Works{ 
+    scroll-margin-top:100px ;
+    
+
+
+
+    
+    .Work-card{
+        position: relative;
+        &:hover{
+            .work-img-layer{
+
+                opacity: 1;
+                transform: translateY(0);
+
+                .header-work , .layer-icons {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+    .work-img-layer{
+        position: absolute;
+        inset: 7px;
+        background-color: white;
+
+        transform: translateY(3%);
+        opacity: 0;
+
+        transition: transform 0.5s , opacity 1s ;
+
+        h3{
+            font-weight:700 ;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+        
+       
+    }
+    
+
+
+    .header-work{
+        opacity: 0;
+        transition: all 0.4s;
+        transform: translateY(-100%);
+    }
+
+    .layer-icons{
+        width: 35px;
+        height: 35px;
+        margin: 3px;
+        border: solid 1px var(--main-color);
+        cursor: pointer;
+
+
+        transition: all 0.4s;
+        opacity: 0;
+        transform: translateY(30%);
+
+        &:hover{
+            background-color: #FFFFFF;
+            color: var(--main-color);
+        }
+    }
+
+    }
+
+
+    /* $$$$$$$$$$$$$$ fixd today 5-12 $$$$$$$$$$$$$$$ */
+    .nav-item button.nav-link{
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: var(--main-color);
+            bottom: 0;
+            height: 3px;
+            left: 0;
+            width: 0;
+
+            transition: width 1s;
+        }
+
+    }
+
+    .nav-item button.nav-link.active{
+    
+        background-color: transparent;
+        border-radius: 0;
+        position: relative;
+        &::after{
+
+            width: 100%;
+            
+        }
+    
+
+
+    }
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+
+    .nav-pills .nav-link{
+
+        padding: 0 0 7px 0;
+        margin: 10px 25px;
+
+
+    }
+
+    .nav .nav-item .nav-link{
+        color:var(--main-color) ;
+        
+        font-family: "Poppins", sans-serif;
+        font-weight:700 ;
+        font-size: 16;
+
+    }
+
+    .modal-body{
+        padding: 0;
+    }
+
+    .modal{
+        --bs-modal-bg:0;
+        background-color: #1c1c1c97;
+        
+
+    }
+
+    .carousel-inner .carousel-item{
+        transition: none;
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+
+    
+    .carousel-inner{
+        overflow: visible;
+    }
+
+}
+
+
+   
+
+    .btn-close{
+        --bs-btn-close-bg:none;
+        --bs-btn-close-opacity: none;
+        --bs-btn-close-hover-opacity: none;
+
+    }
+
+    
+    .carousel-control-prev-icon , .carousel-control-next-icon{
+        background-image:none;
+        
+    }
+    .carousel-control-next, .carousel-control-prev {
+        opacity: 1;
+        justify-content: start;
+        width: 3%;
+        padding: 20px;
+        filter: drop-shadow( 0px 0px 2px var(--main-color));
+    }
+    .carousel-control-next{
+        justify-content: end;
+    }
+    .modal-header{
+        border: none;
+    }
+
+
+
+
+    .work-text-img{
+        
+        position: absolute;
+        bottom: -20px;
+        right: 460px;
+        color: rgb(173, 172, 172);
+        font-size:12px ;
+           
+
+        
+    }
+
+
+/* ////////// end  work section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start Testimonials  section /////////////// */
+
+#Clients{
+    scroll-margin-top:10px; 
+
+
+    .Testimonials-img{
+        
+        width: 100px ;
+        height: 100px;
+        overflow: hidden;
+
+        border-radius: 50%;
+        img{
+            width: 100%;
+        
+            
+        }
+
+    }
+
+
+    .carousel-indicators [data-bs-target]{
+        
+        margin: 7px;
+        background-color: gray;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+
+    .carousel-indicators{
+        bottom: -25px;
+    }
+
+
+
+}
+
+
+
+.text-Testimonials{
+
+
+
+    p{
+        font-weight:400 ;
+        font-size: 15px;
+        color: rgb(116, 129, 130);
+    }
+    h3{
+        font-weight:600 ;
+        font-size: 16px;
+        
+    }
+    span{
+        font-family: "Poppins", sans-serif;
+        font-weight:600 ;
+        font-size: 12px;
+        color: rgb(136, 136, 136);
+    }
+
+
+
+}
+
+
+
+/* ////////// end  Testimonials  section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start  counter /////////////// */
+#jop-counter{
+    
+
+
+
+    span{
+        color: #343434;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        padding: 25px 0 15px 0;
+    }
+
+    p{
+        font-weight: 600;
+        font-size: 15px;
+        color: rgb(116, 129, 130);
+    }
+
+
+    #Happy_Customers{
+    span{
+        &::after{
+            content: '';
+            animation: countUp-1 forwards 1.5s ;
+
+        }
+        }
+    }
+
+    #Complete_Projects{
+    span{
+        &::after{
+            content: '';
+            animation: countUp-2 forwards 1.5s ;
+
+        }
+        }
+    }
+
+   #Lines_Of_Code{
+     span{
+        &::after{
+            content: '';
+            animation: countUp-3 forwards 1.5s ;
+
+        }
+        }
+   }
+
+   #Files_Downloaded{
+     span{
+        &::after{
+            content: '';
+            animation: countUp-4 forwards 1.5s ;
+
+        }
+        }
+   }
+}
+
+
+
+@keyframes countUp-1 {
+  0% { content: "750"; }
+  1% { content: "751"; }
+  2% { content: "752"; }
+  3% { content: "753"; }
+  4% { content: "754"; }
+  5% { content: "755"; }
+  6% { content: "756"; }
+  7% { content: "757"; }
+  8% { content: "758"; }
+  9% { content: "759"; }
+  10% { content: "760"; }
+  11% { content: "761"; }
+  12% { content: "762"; }
+  13% { content: "763"; }
+  14% { content: "764"; }
+  15% { content: "765"; }
+  16% { content: "766"; }
+  17% { content: "767"; }
+  18% { content: "768"; }
+  19% { content: "769"; }
+  20% { content: "770"; }
+  21% { content: "771"; }
+  22% { content: "772"; }
+  23% { content: "773"; }
+  24% { content: "774"; }
+  25% { content: "775"; }
+  26% { content: "776"; }
+  27% { content: "777"; }
+  28% { content: "778"; }
+  29% { content: "779"; }
+  30% { content: "780"; }
+  31% { content: "781"; }
+  32% { content: "782"; }
+  33% { content: "783"; }
+  34% { content: "784"; }
+  35% { content: "785"; }
+  36% { content: "786"; }
+  37% { content: "787"; }
+  38% { content: "788"; }
+  39% { content: "789"; }
+  40% { content: "790"; }
+  41% { content: "791"; }
+  42% { content: "792"; }
+  43% { content: "793"; }
+  44% { content: "794"; }
+  45% { content: "795"; }
+  46% { content: "796"; }
+  47% { content: "797"; }
+  48% { content: "798"; }
+  49% { content: "799"; }
+  50% { content: "800"; }
+  51% { content: "801"; }
+  52% { content: "802"; }
+  53% { content: "803"; }
+  54% { content: "804"; }
+  55% { content: "805"; }
+  56% { content: "806"; }
+  57% { content: "807"; }
+  58% { content: "808"; }
+  59% { content: "809"; }
+  60% { content: "810"; }
+  61% { content: "811"; }
+  62% { content: "812"; }
+  63% { content: "813"; }
+  64% { content: "814"; }
+  65% { content: "815"; }
+  66% { content: "816"; }
+  67% { content: "817"; }
+  68% { content: "818"; }
+  69% { content: "819"; }
+  70% { content: "820"; }
+  71% { content: "821"; }
+  72% { content: "822"; }
+  73% { content: "823"; }
+  74% { content: "824"; }
+  75% { content: "825"; }
+  76% { content: "826"; }
+  77% { content: "827"; }
+  78% { content: "828"; }
+  79% { content: "829"; }
+  80% { content: "830"; }
+  81% { content: "831"; }
+  82% { content: "832"; }
+  83% { content: "833"; }
+  84% { content: "834"; }
+  85% { content: "835"; }
+  86% { content: "836"; }
+  87% { content: "837"; }
+  88% { content: "838"; }
+  89% { content: "839"; }
+  90% { content: "840"; }
+  91% { content: "841"; }
+  92% { content: "842"; }
+  93% { content: "843"; }
+  94% { content: "844"; }
+  95% { content: "845"; }
+  96% { content: "846"; }
+  97% { content: "847"; }
+  98% { content: "848"; }
+  99% { content: "849"; }
+  100% { content: "850"; }
+}
+
+@keyframes countUp-2 {
+  0% { content: "130"; }
+  1% { content: "131"; }
+  2% { content: "132"; }
+  3% { content: "133"; }
+  4% { content: "134"; }
+  5% { content: "135"; }
+  6% { content: "136"; }
+  7% { content: "137"; }
+  8% { content: "138"; }
+  9% { content: "139"; }
+  10% { content: "140"; }
+  11% { content: "141"; }
+  12% { content: "142"; }
+  13% { content: "143"; }
+  14% { content: "144"; }
+  15% { content: "145"; }
+  16% { content: "146"; }
+  17% { content: "147"; }
+  18% { content: "148"; }
+  19% { content: "149"; }
+  20% { content: "150"; }
+  21% { content: "151"; }
+  22% { content: "152"; }
+  23% { content: "153"; }
+  24% { content: "154"; }
+  25% { content: "155"; }
+  26% { content: "156"; }
+  27% { content: "157"; }
+  28% { content: "158"; }
+  29% { content: "159"; }
+  30% { content: "160"; }
+  31% { content: "161"; }
+  32% { content: "162"; }
+  33% { content: "163"; }
+  34% { content: "164"; }
+  35% { content: "165"; }
+  36% { content: "166"; }
+  37% { content: "167"; }
+  38% { content: "168"; }
+  39% { content: "169"; }
+  40% { content: "170"; }
+  41% { content: "171"; }
+  42% { content: "172"; }
+  43% { content: "173"; }
+  44% { content: "174"; }
+  45% { content: "175"; }
+  46% { content: "176"; }
+  47% { content: "177"; }
+  48% { content: "178"; }
+  49% { content: "179"; }
+  50% { content: "180"; }
+  51% { content: "181"; }
+  52% { content: "182"; }
+  53% { content: "183"; }
+  54% { content: "184"; }
+  55% { content: "185"; }
+  56% { content: "186"; }
+  57% { content: "187"; }
+  58% { content: "188"; }
+  59% { content: "189"; }
+  60% { content: "190"; }
+  61% { content: "191"; }
+  62% { content: "192"; }
+  63% { content: "193"; }
+  64% { content: "194"; }
+  65% { content: "195"; }
+  66% { content: "196"; }
+  67% { content: "197"; }
+  68% { content: "198"; }
+  69% { content: "199"; }
+  70% { content: "200"; }
+  71% { content: "201"; }
+  72% { content: "202"; }
+  73% { content: "203"; }
+  74% { content: "204"; }
+  75% { content: "205"; }
+  76% { content: "206"; }
+  77% { content: "207"; }
+  78% { content: "208"; }
+  79% { content: "209"; }
+  80% { content: "210"; }
+  81% { content: "211"; }
+  82% { content: "212"; }
+  83% { content: "213"; }
+  84% { content: "214"; }
+  85% { content: "215"; }
+  86% { content: "216"; }
+  87% { content: "217"; }
+  88% { content: "218"; }
+  89% { content: "219"; }
+  90% { content: "220"; }
+  91% { content: "221"; }
+  92% { content: "222"; }
+  93% { content: "223"; }
+  94% { content: "224"; }
+  95% { content: "225"; }
+  96% { content: "226"; }
+  97% { content: "227"; }
+  98% { content: "228"; }
+  99% { content: "229"; }
+  100% { content: "230"; }
+}
+
+@keyframes countUp-3 {
+  0% { content: "9350"; }
+  1% { content: "9351"; }
+  2% { content: "9352"; }
+  3% { content: "9353"; }
+  4% { content: "9354"; }
+  5% { content: "9355"; }
+  6% { content: "9356"; }
+  7% { content: "9357"; }
+  8% { content: "9358"; }
+  9% { content: "9359"; }
+  10% { content: "9360"; }
+  11% { content: "9361"; }
+  12% { content: "9362"; }
+  13% { content: "9363"; }
+  14% { content: "9364"; }
+  15% { content: "9365"; }
+  16% { content: "9366"; }
+  17% { content: "9367"; }
+  18% { content: "9368"; }
+  19% { content: "9369"; }
+  20% { content: "9370"; }
+  21% { content: "9371"; }
+  22% { content: "9372"; }
+  23% { content: "9373"; }
+  24% { content: "9374"; }
+  25% { content: "9375"; }
+  26% { content: "9376"; }
+  27% { content: "9377"; }
+  28% { content: "9378"; }
+  29% { content: "9379"; }
+  30% { content: "9380"; }
+  31% { content: "9381"; }
+  32% { content: "9382"; }
+  33% { content: "9383"; }
+  34% { content: "9384"; }
+  35% { content: "9385"; }
+  36% { content: "9386"; }
+  37% { content: "9387"; }
+  38% { content: "9388"; }
+  39% { content: "9389"; }
+  40% { content: "9390"; }
+  41% { content: "9391"; }
+  42% { content: "9392"; }
+  43% { content: "9393"; }
+  44% { content: "9394"; }
+  45% { content: "9395"; }
+  46% { content: "9396"; }
+  47% { content: "9397"; }
+  48% { content: "9398"; }
+  49% { content: "9399"; }
+  50% { content: "9400"; }
+  51% { content: "9401"; }
+  52% { content: "9402"; }
+  53% { content: "9403"; }
+  54% { content: "9404"; }
+  55% { content: "9405"; }
+  56% { content: "9406"; }
+  57% { content: "9407"; }
+  58% { content: "9408"; }
+  59% { content: "9409"; }
+  60% { content: "9410"; }
+  61% { content: "9411"; }
+  62% { content: "9412"; }
+  63% { content: "9413"; }
+  64% { content: "9414"; }
+  65% { content: "9415"; }
+  66% { content: "9416"; }
+  67% { content: "9417"; }
+  68% { content: "9418"; }
+  69% { content: "9419"; }
+  70% { content: "9420"; }
+  71% { content: "9421"; }
+  72% { content: "9422"; }
+  73% { content: "9423"; }
+  74% { content: "9424"; }
+  75% { content: "9425"; }
+  76% { content: "9426"; }
+  77% { content: "9427"; }
+  78% { content: "9428"; }
+  79% { content: "9429"; }
+  80% { content: "9430"; }
+  81% { content: "9431"; }
+  82% { content: "9432"; }
+  83% { content: "9433"; }
+  84% { content: "9434"; }
+  85% { content: "9435"; }
+  86% { content: "9436"; }
+  87% { content: "9437"; }
+  88% { content: "9438"; }
+  89% { content: "9439"; }
+  90% { content: "9440"; }
+  91% { content: "9441"; }
+  92% { content: "9442"; }
+  93% { content: "9443"; }
+  94% { content: "9444"; }
+  95% { content: "9445"; }
+  96% { content: "9446"; }
+  97% { content: "9447"; }
+  98% { content: "9448"; }
+  99% { content: "9449"; }
+  100% { content: "9450"; }
+}
+
+@keyframes countUp-4 {
+  0% { content: "680"; }
+  1% { content: "681"; }
+  2% { content: "682"; }
+  3% { content: "683"; }
+  4% { content: "684"; }
+  5% { content: "685"; }
+  6% { content: "686"; }
+  7% { content: "687"; }
+  8% { content: "688"; }
+  9% { content: "689"; }
+  10% { content: "690"; }
+  11% { content: "691"; }
+  12% { content: "692"; }
+  13% { content: "693"; }
+  14% { content: "694"; }
+  15% { content: "695"; }
+  16% { content: "696"; }
+  17% { content: "697"; }
+  18% { content: "698"; }
+  19% { content: "699"; }
+  20% { content: "700"; }
+  21% { content: "701"; }
+  22% { content: "702"; }
+  23% { content: "703"; }
+  24% { content: "704"; }
+  25% { content: "705"; }
+  26% { content: "706"; }
+  27% { content: "707"; }
+  28% { content: "708"; }
+  29% { content: "709"; }
+  30% { content: "710"; }
+  31% { content: "711"; }
+  32% { content: "712"; }
+  33% { content: "713"; }
+  34% { content: "714"; }
+  35% { content: "715"; }
+  36% { content: "716"; }
+  37% { content: "717"; }
+  38% { content: "718"; }
+  39% { content: "719"; }
+  40% { content: "720"; }
+  41% { content: "721"; }
+  42% { content: "722"; }
+  43% { content: "723"; }
+  44% { content: "724"; }
+  45% { content: "725"; }
+  46% { content: "726"; }
+  47% { content: "727"; }
+  48% { content: "728"; }
+  49% { content: "729"; }
+  50% { content: "730"; }
+  51% { content: "731"; }
+  52% { content: "732"; }
+  53% { content: "733"; }
+  54% { content: "734"; }
+  55% { content: "735"; }
+  56% { content: "736"; }
+  57% { content: "737"; }
+  58% { content: "738"; }
+  59% { content: "739"; }
+  60% { content: "740"; }
+  61% { content: "741"; }
+  62% { content: "742"; }
+  63% { content: "743"; }
+  64% { content: "744"; }
+  65% { content: "745"; }
+  66% { content: "746"; }
+  67% { content: "747"; }
+  68% { content: "748"; }
+  69% { content: "749"; }
+  70% { content: "750"; }
+  71% { content: "751"; }
+  72% { content: "752"; }
+  73% { content: "753"; }
+  74% { content: "754"; }
+  75% { content: "755"; }
+  76% { content: "756"; }
+  77% { content: "757"; }
+  78% { content: "758"; }
+  79% { content: "759"; }
+  80% { content: "760"; }
+  81% { content: "761"; }
+  82% { content: "762"; }
+  83% { content: "763"; }
+  84% { content: "764"; }
+  85% { content: "765"; }
+  86% { content: "766"; }
+  87% { content: "767"; }
+  88% { content: "768"; }
+  89% { content: "769"; }
+  90% { content: "770"; }
+  91% { content: "771"; }
+  92% { content: "772"; }
+  93% { content: "773"; }
+  94% { content: "774"; }
+  95% { content: "775"; }
+  96% { content: "776"; }
+  97% { content: "777"; }
+  98% { content: "778"; }
+  99% { content: "779"; }
+  100% { content: "780"; }
+}
+
+
+
+
+/* ////////// end  counter /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start Our Team  section /////////////// */
+
+#Team{
+    scroll-margin-top:50px;
+}
+
+.team-card{
+    background-color: #5B5B5B;
+    &:hover{
+        .leayer{
+            transform: rotateY(0deg) ;
+            inset: 5px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+}
+
+.team-img{
+    position: relative;
+    overflow: hidden;
+    img{
+        transition: transform 0.5s;
+    }
+   
+    &:hover{
+
+
+        img{
+            transform: scale(1.2);
+        }
+    }
+
+}
+
+
+.leayer{
+        position: absolute;
+        visibility: hidden;
+        inset: 120px;
+        background-color: white;
+        transform: rotateY(180deg);
+        opacity: 0;
+        transition: all 0.5s ;
+        transition: visibility 0.3;
+
+
+        .team-icons{
+            margin: 10px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--main-color);
+
+            &:hover{
+                background-color: var(--text-color);
+                color: var(--main-color);
+            }
+
+        }
+        
+}
+
+.team-text{
+    h4{
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    h3{
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+/* ////////// end  Our Team  section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start  section /////////////// */
+
+#Contact{
+    scroll-margin-top:-60px;
+}
+
+.Contact{
+
+
+
+    h3{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    p{
+        font-weight: 400;
+        font-size: 15px;
+        color: rgb(116, 129, 130);
+    }
+}
+
+
+.Contact-leaner{
+
+
+    &:hover{
+        .Contact-icons{
+            background-color: var(--main-color);
+            color: var(--text-color);
+        }
+    }
+}
+
+
+.Contact-icons{
+    width: 60px;
+    height: 60px;
+
+    transition: all 0.6s;
+
+
+}
+
+
+.input-contact{
+
+    
+    padding: 20px;
+    height: 40px;
+}
+.text-area-contact{
+
+    
+    min-height: 200px;
+    max-height: 200px;
+
+}
+
+.input-contact{
+
+
+    border: solid 2px #1c1c1c39;
+    transition: border 1s ;
+    border-radius: 7px;
+    &:focus{
+        border: 2px #1C1C1C solid;
+        outline: none;
+    }
+
+    
+}
+
+
+.btn-contact{
+    padding: 10px 40px;
+    background-color: var(--main-color) ;
+    color: var(--text-color);
+    border: solid 1px var(--main-color) !important;
+    border-radius: 7px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* ////////// end   section /////////////// */
+/* ////////  /////////  ////////////////  //////// */
+
+
+
+
+
+/* ////////  /////////  ////////////////  //////// */
+/* ////////// start  footer /////////////// */
+#footer{
+    background-color: var(--main-color);
+    color: #748182;
+    padding: 40px 0;
+
+    p{
+        font-weight: 400;
+        font-size: 13px;
+        margin: 0;
+    }
+}
+/* ////////// end   footer /////////////// */
+/* ////////  /////////  ////////////////  //////// */
